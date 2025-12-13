@@ -1,0 +1,540 @@
+/* --- Pastel Color Palette Definition --- */
+:root {
+    --color-primary: #FFB3BA; /* Pastel Pink - For accents, buttons, headings */
+    --color-secondary: #BAE1FF; /* Pastel Blue - For hover states, secondary accents */
+    --color-background: #FFFFC2; /* Very Light Yellow/Cream - Main background */
+    --color-card: #FFDFBA; /* Pastel Orange/Peach - Background for general cards */
+    --color-text-dark: #36454F; /* Charcoal/Dark Gray - Main text color */
+    --color-text-light: #5A5A5A; /* Medium Gray - Secondary text color */
+
+    --font-heading: 'Playfair Display', serif; /* Elegant font for titles */
+    --font-body: 'Poppins', sans-serif; /* Clean font for body text */
+}
+
+/* --- Global Styles and Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* --- Buttons --- */
+.btn-primary a,
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary a {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+}
+
+.btn-primary a:hover {
+    background-color: #FF8792; /* A slightly darker pink */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+/* --- Header and Navigation --- */
+.header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-primary);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Hero Section (Index Page) --- */
+/* --- Hero Section (Index Page) --- */
+.hero {
+    /* MODIFIED: Now sets the base color to the pastel blue */
+    background-color: var(--color-secondary); 
+    
+    /* Keep other properties */
+    text-align: center;
+    padding: 150px 0;
+    color: var(--color-text-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* MODIFIED: The pseudo-element now holds the image */
+    background: url('bg.jpg') no-repeat center center/cover; 
+    
+    /* NEW: Sets the transparency of the image to 30% */
+    opacity: 0.3; 
+    
+    /* Ensure the text is *above* this image/overlay */
+    z-index: 1; 
+}
+
+.hero .container {
+    position: relative;
+    /* Ensure container content (text/buttons) is above the background and the image overlay */
+    z-index: 2; 
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 0.1em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* --- Menu Showcase (Index Page - small preview) --- */
+.menu-showcase {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.menu-showcase h3 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: var(--color-card);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.menu-item h4 {
+    color: var(--color-text-dark);
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    color: var(--color-text-light);
+}
+
+/* --- About Section (Index Page) --- */
+.about {
+    background-color: var(--color-secondary);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 2.5em;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* =======================================
+   GENERAL PAGE LAYOUT STYLES (Applies to secondary pages)
+   ======================================= */
+.page-content {
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.page-title {
+    font-size: 3em;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-secondary);
+    margin: 40px 0;
+}
+
+/* =======================================
+   MENU PAGE STYLES (.menu-page) - ORGANIZED VERSION
+   ======================================= */
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.menu-category h3 {
+    font-size: 2.2em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 5px solid var(--color-primary);
+}
+
+.category-description {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 35px; /* Increased space between items */
+}
+
+.menu-item-detail {
+    background-color: white; /* Clean white background */
+    border: 1px solid var(--color-secondary); /* Light pastel border */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-detail:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-primary);
+}
+
+.menu-item-detail h4 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: var(--color-text-dark);
+}
+
+.menu-item-detail .description {
+    color: var(--color-text-light);
+    margin-bottom: 12px;
+}
+
+.menu-item-detail .tags {
+    display: inline-block;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+/* =======================================
+   OUR STORY PAGE STYLES (.story-page)
+   ======================================= */
+.story-page .intro {
+    background-color: var(--color-card);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto 50px;
+    text-align: center;
+    max-width: 800px;
+}
+.story-page .intro p {
+    margin: 10px 0;
+}
+
+.story-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.story-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    flex: 1;
+    padding: 10px;
+}
+
+.story-text h3 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* =======================================
+   OUR STORY PAGE STYLES (.story-page) - IMAGE IMPLEMENTATION
+   ====================================== */
+
+/* General styling for all story image boxes */
+.story-image {
+    flex: 1;
+    height: 300px;
+    background-color: var(--color-secondary); 
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover; /* Ensures image covers the whole box */
+    background-position: center; /* Centers the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Hide the original placeholder text */
+    text-indent: -9999px;
+}
+
+/* Targeting the FIRST story section image (Broth) */
+.story-page .container > .story-section:nth-of-type(1) .story-image {
+    background-image: url('noodle.jpg');
+}
+
+/* Targeting the SECOND story section image (Noodles) */
+.story-page .container > .story-section:nth-of-type(2) .story-image {
+    background-image: url('broth.jpg');
+}
+
+/* Targeting the THIRD story section image (Comfort/Interior) */
+.story-page .container > .story-section:nth-of-type(3) .story-image {
+    background-image: url('shinzo_noodle.jpg');
+}
+
+/* Targeting the FOURTH story section image (Comfort/Interior) */
+.story-page .container > .story-section:nth-of-type(4) .story-image {
+    background-image: url('noodle.jpg');
+}
+
+/* =======================================
+   FIND US PAGE STYLES (.findus-page)
+   ======================================= */
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.location-grid h3 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.map-placeholder {
+    height: 400px;
+    background-color: var(--color-card);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Placeholder map image */
+    background-image: url('map.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hours-table th, .hours-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hours-table th {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    font-weight: 600;
+}
+
+.hours-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.hours-table tr:nth-child(odd) {
+    background-color: var(--color-background);
+}
+
+
+/* =======================================
+   ORDER PAGE STYLES (.order-page)
+   ======================================= */
+.order-page {
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--color-secondary);
+}
+
+.order-page h2 {
+    font-size: 3.5em;
+    color: var(--color-text-dark);
+}
+
+.order-page p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-background);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+
+/* =======================================
+   MEDIA QUERIES (Responsiveness)
+   ======================================= */
+@media (max-width: 900px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+    .story-section, .story-section.reverse {
+        flex-direction: column;
+    }
+    .menu-list {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        padding: 80px 0;
+    }
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+    .nav ul {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

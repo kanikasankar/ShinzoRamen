@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Shinzo Ramen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific Styles for the Story Page to enhance aesthetic */
+        .story-page .intro {
+            background-color: var(--color-card); 
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .story-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+        .story-section.reverse {
+            flex-direction: row-reverse;
+        }
+        .story-text {
+            flex: 1;
+        }
+        .story-image {
+            flex: 1;
+            height: 300px;
+            background-color: var(--color-secondary); /* Placeholder for image */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Shinzo Ramen</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="findus.html">Find Us</a></li>
+                    <li class="btn-primary"><a href="order.html">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content story-page">
+        <div class="container">
+            <h2 class="page-title" style="text-align: center;">The Soulful Journey of Shinzo Ramen</h2>
+
+            <div class="intro">
+                <p style="font-size: 1.2em; font-style: italic;">"In every bowl, a story of tradition, patience, and comfort."</p>
+                <p>Shinzo Ramen was founded on a simple, profound dream: to bring the authentic, comforting flavors of a small Tokyo alleyway shop to our community. Our journey is one of passion, persistence, and an unwavering commitment to quality.</p>
+            </div>
+
+            <div class="story-section">
+                <div class="story-text">
+                    <h3>The Broth: A Symphony of Time</h3>
+                    <p>It all starts with the **broth**. For our signature Tonkotsu, we simmer high-quality pork bones for **over 12 hours**, extracting every ounce of rich flavor and creating a creamy, velvety texture. This slow, deliberate process is the heart of Japanese culinary tradition—a true labor of love that you can taste in every spoonful.</p>
+                </div>
+                <div class="story-image">
+                    </div>
+            </div>
+
+            <div class="story-section reverse">
+                <div class="story-text">
+                    <h3>The Noodles: Handcrafted Perfection</h3>
+                    <p>We believe the noodle is just as crucial as the broth. That's why we make our own, right here in the shop. Using a traditional Japanese recipe, our noodles are perfectly chewy, designed to capture the broth and enhance the texture of the dish. They are the beautiful bridge between soup and ingredients.</p>
+                </div>
+                <div class="story-image">
+                    </div>
+            </div>
+            
+            <div class="story-section">
+                <div class="story-text">
+                    <h3>Our Promise: Simple Comfort</h3>
+                    <p>At Shinzo Ramen, we are more than a restaurant; we are a warm haven. We promise simple, nourishing food that speaks to the soul. Come sit down, take a deep breath, and let us serve you a bowl of tradition. You're not just eating ramen; you're tasting a piece of our story.</p>
+                </div>
+                <div class="story-image">
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shinzo Ramen. All rights reserved.</p>
+            <div class="contact-info">
+                <p>📍 123 Ramen Lane, Cityville, CA 90210</p>
+                <p>📞 (555) 555-RAMEN</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

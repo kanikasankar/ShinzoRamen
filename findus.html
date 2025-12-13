@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us - Shinzo Ramen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific Styles for the Find Us Page */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .map-placeholder {
+            height: 400px;
+            background-color: var(--color-card); /* Pastel block for map area */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .hours-table th, .hours-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .hours-table th {
+            background-color: var(--color-primary);
+            color: var(--color-text-dark);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Shinzo Ramen</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="findus.html">Find Us</a></li>
+                    <li class="btn-primary"><a href="order.html">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content findus-page">
+        <div class="container">
+            <h2 class="page-title">Locate Your Comfort</h2>
+
+            <div class="location-grid">
+                <div class="contact-details">
+                    <h3>Visit Our Cozy Shop</h3>
+                    <p style="font-size: 1.1em; font-weight: 600;">Shinzo Ramen</p>
+                    <p>123 Ramen Lane, Cityville, CA 90210</p>
+                    <p>Right next to the old cinema and the rose garden.</p>
+                    <p>Call Ahead: **(555) 555-RAMEN**</p>
+                    <p style="margin-top: 20px;"><a href="https://maps.google.com/?q=123+Ramen+Lane" target="_blank" class="btn-secondary">Get Directions</a></p>
+
+                    <h3 style="margin-top: 40px;">Opening Hours</h3>
+                    <table class="hours-table">
+                        <tr><th>Day</th><th>Hours</th></tr>
+                        <tr><td>Tuesday - Friday</td><td>11:30 AM - 9:00 PM</td></tr>
+                        <tr><td>Saturday - Sunday</td><td>12:00 PM - 10:00 PM</td></tr>
+                        <tr><td>Monday</td><td>Closed (Broth Day!)</td></tr>
+                    </table>
+                </div>
+
+                <div class="map-section">
+                    <h3>Where the Magic Happens</h3>
+                    <div class="map-placeholder">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shinzo Ramen. All rights reserved.</p>
+            <div class="contact-info">
+                <p>📍 123 Ramen Lane, Cityville, CA 90210</p>
+                <p>📞 (555) 555-RAMEN</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
