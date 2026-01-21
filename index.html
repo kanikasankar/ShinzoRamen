@@ -3,80 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinzo Ramen - Authentic Japanese Comfort</title>
-    <link rel="stylesheet" href="styles.css"> 
+
+    <title>Shinzo Ramen | Authentic Japanese Ramen in Chennai</title>
+    <meta name="description" content="Shinzo Ramen serves authentic Japanese ramen in Chennai. Enjoy handcrafted broth, fresh noodles, and comforting bowls made with tradition. View our menu and visit us today.">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Restaurant Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Shinzo Ramen",
+      "image": "https://shinzoramen.vercel.app/shinzo-ramen-hero.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Ramen Lane",
+        "addressLocality": "Chennai",
+        "addressRegion": "TN",
+        "postalCode": "600001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-55555-72636",
+      "servesCuisine": "Japanese",
+      "priceRange": "$$",
+      "url": "https://shinzoramen.vercel.app/",
+      "openingHours": [
+        "Tu-Fr 11:30-21:00",
+        "Sa-Su 12:00-22:00"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer vegan ramen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We serve our Shinzo Vegan Tantanmen, made with a rich cashew and roasted vegetable broth, topped with plant-based crumbles and baby bok choy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer takeout or delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can order ramen online for delivery or pickup through our partner platforms. Visit our Order Online page to place your order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your opening hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are open Tuesday to Friday from 11:30 AM to 9:00 PM, and Saturday to Sunday from 12:00 PM to 10:00 PM. We are closed on Mondays for broth preparation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are you located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are located at 123 Ramen Lane, Chennai, Tamil Nadu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you make your noodles in-house?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We make our noodles fresh in-house every day using a traditional Japanese recipe, designed to perfectly complement our slow-simmered broths."
+          }
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body>
 
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1 class="logo">Shinzo Ramen</h1>
-            
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-                ☰
-            </button>
+            <div class="logo">Shinzo Ramen</div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
 
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="menu.html">Ramen Menu</a></li>
                     <li><a href="story.html">Our Story</a></li>
-                    <li><a href="findus.html">Find Us</a></li>
-                    <li class="btn-primary"><a href="order.html">Order Now</a></li>
+                    <li><a href="findus.html">Ramen Restaurant Location</a></li>
+                    <li class="btn-primary"><a href="order.html">Order Ramen Online</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
-            <h2>Warm Bowls, Warm Hearts.</h2>
-            <p>Experience the soulful taste of authentic Japanese ramen, handcrafted with love and fresh ingredients.</p>
+            <h1>Authentic Japanese Ramen in Chennai</h1>
+            <p class="hero-tagline">Warm Bowls, Warm Hearts.</p>
+
+            <img src="shinzo-ramen-bowl.jpg"
+                 alt="A bowl of authentic Japanese ramen at Shinzo Ramen in Chennai"
+                 class="featured-ramen">
+
+            <p>
+                Experience the soulful taste of authentic Japanese ramen in Chennai, handcrafted with love,
+                slow-simmered broth, and fresh house-made noodles.
+                We’re a cozy ramen restaurant serving comforting bowls inspired by Tokyo.
+                <a href="menu.html">Explore our full menu</a> or
+                <a href="findus.html">visit our Chennai location</a>.
+            </p>
+
             <a href="menu.html" class="btn-secondary">View Full Menu</a>
         </div>
     </section>
 
+    <!-- Menu Showcase -->
     <section id="menu" class="menu-showcase">
         <div class="container">
-            <h3>Our Signature Bowls</h3>
+            <h2>Signature Ramen Bowls in Chennai</h2>
+
             <div class="menu-grid">
                 <div class="menu-item">
-                    <h4>Tonkotsu Classic</h4>
-                    <p>Rich, creamy pork bone broth, tender chashu, and fresh scallions.</p>
+                    <h3>Tonkotsu Classic</h3>
+                    <p>Rich, creamy pork bone broth simmered for hours, tender chashu, and fresh scallions in our classic Tonkotsu ramen.</p>
                 </div>
+
                 <div class="menu-item">
-                    <h4>Spicy Miso</h4>
+                    <h3>Spicy Miso</h3>
                     <p>A fiery blend of savory miso paste and flavorful chili oil, topped with corn.</p>
                 </div>
+
                 <div class="menu-item">
-                    <h4>House-Made Gyoza</h4>
+                    <h3>House-Made Gyoza</h3>
                     <p>Pan-fried dumplings with a crispy bottom, perfect for dipping.</p>
                 </div>
             </div>
+
             <a href="menu.html" class="btn-secondary">See All Dishes</a>
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
-            <h3>The Shinzo Difference</h3>
-            <p>From slow-cooked broth that simmers for over 12 hours to our house-made noodles, every element of our ramen is crafted with tradition and passion. We aim to bring a piece of Tokyo to your table.</p>
+            <h2>The Shinzo Difference</h2>
+
+            <p>
+                From slow-cooked broth that simmers for over 12 hours to our house-made noodles,
+                every element of our authentic Japanese ramen is crafted with tradition and passion.
+                Shinzo Ramen is a local ramen restaurant in Chennai dedicated to simple, comforting food.
+                Learn more <a href="story.html">about our story</a> and what makes Shinzo Ramen special.
+            </p>
+
             <a href="story.html" class="btn-secondary">Read Our Full Story</a>
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Do you offer vegan ramen?</h3>
+                <p>
+                    Yes. We serve our Shinzo Vegan Tantanmen, made with a rich cashew and roasted vegetable broth,
+                    topped with plant-based crumbles and baby bok choy.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer takeout or delivery?</h3>
+                <p>
+                    Yes. You can order ramen online for delivery or pickup through our partner platforms.
+                    Visit our <a href="order.html">Order Online</a> page to place your order.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What are your opening hours?</h3>
+                <p>
+                    We are open Tuesday to Friday from 11:30 AM to 9:00 PM,
+                    and Saturday to Sunday from 12:00 PM to 10:00 PM.
+                    We are closed on Mondays for broth preparation.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where are you located?</h3>
+                <p>
+                    We are located at 123 Ramen Lane, Chennai, Tamil Nadu.
+                    You can find directions on our <a href="findus.html">Find Us</a> page.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you make your noodles in-house?</h3>
+                <p>
+                    Yes. We make our noodles fresh in-house every day using a traditional Japanese recipe,
+                    designed to perfectly complement our slow-simmered broths.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="container">
-            <p>© 2025 Shinzo Ramen. All rights reserved.</p>
+            <div class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="menu.html">Ramen Menu</a> |
+                <a href="story.html">Our Story</a> |
+                <a href="findus.html">Location</a> |
+                <a href="order.html">Order Online</a>
+            </div>
+
+            <p>&copy; 2025 Shinzo Ramen. All rights reserved.</p>
+
             <div class="contact-info">
-                <p>📍 <a href="findus.html" style="color: var(--color-background); text-decoration: underline;">123 Ramen Lane, Cityville, CA 90210</a></p>
-                <p>📞 (555) 555-RAMEN</p>
+                <p>📍 123 Ramen Lane, Chennai, TN 600001</p>
+                <p>📞 +91 55555 72636</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>
