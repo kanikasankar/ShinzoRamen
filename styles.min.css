@@ -111,7 +111,6 @@ h1, h2, h3, h4 {
 }
 
 /* --- Hero Section (Index Page) --- */
-/* --- Hero Section (Index Page) --- */
 .hero {
     /* MODIFIED: Now sets the base color to the pastel blue */
     background-color: var(--color-secondary); 
