@@ -93,24 +93,31 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">Shinzo Ramen</div>
+    <header class="header" role="banner">
+    <div class="container">
+        <div class="logo">Shinzo Ramen</div>
 
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+        <button class="mobile-menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+            ☰
+        </button>
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Ramen Menu</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="findus.html">Ramen Restaurant Location</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li class="btn-primary"><a href="order.html">Order Ramen Online</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <nav class="nav" id="primary-navigation" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="findus.html">Location</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="btn-primary"><a href="order.html">Order Online</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <!-- Blog Page -->
     <section class="page-content blog-page">
